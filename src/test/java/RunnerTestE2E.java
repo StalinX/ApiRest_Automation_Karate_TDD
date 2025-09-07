@@ -22,6 +22,7 @@ class RunnerTestE2E {
 
         Results results = Runner.path("classpath:karate/e2e/add_Pet.feature")
                 .outputCucumberJson(true)
+                .reportDir("build/karate-reports")
                 .parallel(threads);
 
         generateReport(results.getReportDir());
