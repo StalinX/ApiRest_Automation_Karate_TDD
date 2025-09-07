@@ -1,0 +1,22 @@
+{
+  "scenarios": [
+    {
+      "scenario": "Successfully Add Pets",
+      "number": "0",
+      "examples": [
+        {
+          "id": 100,
+          "idCategory": 10,
+          "nameCategory": "s_234t",
+          "namePet": "Homepage",
+          "photoUrls": "https://example.org",
+          "idTag": 1,
+          "nameTag": "tag1",
+          "status": "available",
+          "statusCode": 200
+        }
+      ]
+    }
+  ]
+}
+

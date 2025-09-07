@@ -1,0 +1,45 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    karateVersion = '1.4.0'        // versión estable de Karate
+    junitVersion = '5.10.2'
+    cucumberVersion = '7.17.0'     // última estable de Cucumber-JVM
+    lombokVersion = '1.18.34'
+    cucumberReportVersion = "5.10.1"// versión actual de Lombok
+}
+
+dependencies {
+
+    implementation 'org.slf4j:slf4j-api:2.0.9' // Versión de SLF4J
+    runtimeOnly 'ch.qos.logback:logback-classic:1.4.14' // Versión compatible con SLF4J 2.x
+    // Karate con soporte JUnit 5
+    testImplementation "com.intuit.karate:karate-junit5:$karateVersion"
+
+    // JUnit Jupiter
+    testImplementation "org.junit.jupiter:junit-jupiter:$junitVersion"
+
+    // Cucumber JVM (core + JUnit 5 engine)
+    testImplementation "io.cucumber:cucumber-java:$cucumberVersion"
+    testImplementation "io.cucumber:cucumber-junit-platform-engine:$cucumberVersion"
+    testImplementation "net.masterthought:cucumber-reporting:${cucumberReportVersion}"
+
+    // Lombok (para evitar getters/setters/manual boilerplate)
+    compileOnly "org.projectlombok:lombok:$lombokVersion"
+    annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+
+    // Lombok para tests
+    testCompileOnly "org.projectlombok:lombok:$lombokVersion"
+    testAnnotationProcessor "org.projectlombok:lombok:$lombokVersion"
+}
+
+test {
+    useJUnitPlatform()
+    // Ejemplo: ejecutar solo escenarios con tag @smoke
+    // systemProperty "cucumber.filter.tags", "@smoke"
+}

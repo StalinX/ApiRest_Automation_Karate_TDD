@@ -1,0 +1,51 @@
+# === Archivos del sistema ===
+.DS_Store
+Thumbs.db
+
+# === Archivos de compilación ===
+/target/
+/bin/
+/out/
+/build/
+
+# === Archivos de dependencias ===
+/.gradle/
+/mvnw.cmd
+/mvnw
+/.mvn/
+
+# === Logs y reportes ===
+*.log
+*.tmp
+*.swp
+*.lock
+karate.log
+karate-summary.html
+karate-summary-json.txt
+karate-report/
+cucumber-report-html/
+surefire-reports/
+extent-reports/
+allure-results/
+allure-report/
+
+# === IDEs ===
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# VSCode
+.vscode/
+
+# === Configuración temporal ===
+*.bak
+*.orig
+*.rej
+
+# === Archivos de sistema de control ===
+*.cache
