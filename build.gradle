@@ -20,6 +20,7 @@ dependencies {
     runtimeOnly 'ch.qos.logback:logback-classic:1.4.14' // Versión compatible con SLF4J 2.x
     // Karate con soporte JUnit 5
     testImplementation "com.intuit.karate:karate-junit5:$karateVersion"
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
     // JUnit Jupiter
     testImplementation "org.junit.jupiter:junit-jupiter:$junitVersion"
