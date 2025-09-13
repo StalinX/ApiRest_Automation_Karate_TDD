@@ -1,4 +1,4 @@
-Feature: Transfer from Current accounts to own (transferDestinationType: T003) Fund
+Feature: Automatizacion API - https://petstore.swagger.io
 
   Background:
     * url api.baseUrl
@@ -41,7 +41,6 @@ Feature: Transfer from Current accounts to own (transferDestinationType: T003) F
     * def modifiedBody = JSON.parse(JSON.stringify(requestBody))
     * def modifiedBody = removeField(modifiedBody, '<field>')
     * print modifiedBody
-
     Given headers headersGlobal
     When request modifiedBody
     And method POST
