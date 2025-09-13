@@ -9,8 +9,8 @@ function fn() {
 
   // 2) Entero aleatorio (si tu API exige number)
   gen.int = function(min, max) {
-    min = (typeof min === 'number') ? min : 100;      // 6 dígitos
-    max = (typeof max === 'number') ? max : 2000;  // 9 dígitos
+    min = (typeof min === 'number') ? min : 1000;      // 6 dígitos
+    max = (typeof max === 'number') ? max : 20000;  // 9 dígitos
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
 

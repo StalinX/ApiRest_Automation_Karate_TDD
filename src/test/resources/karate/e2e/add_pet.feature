@@ -9,11 +9,11 @@ Feature: Transfer from Current accounts to own (transferDestinationType: T003) F
     * def responseBody = read("classpath:contracts-schemas/responses/schemaResponse.json")
 
     * def filepath = read("classpath:dataDriven/dataSchemaRequests.json")
-    #* def requestBody = read("classpath:jsonbase/request/request_body_own_transfer_deposit_to_fund.json")
+    #* json filepath = read("classpath:dataDriven/dataSchemaRequests.json")
 
   @AddPet
   Scenario Outline: Add Pet
-    * set requestBody.id = idGen.int(100, 20000)
+    * set requestBody.id = idGen.int(1000, 200000)
     * set requestBody.category.id = filepath.scenarios[<case scenarios>].examples[<case examples>].idCategory
     * set requestBody.category.name = filepath.scenarios[<case scenarios>].examples[<case examples>].nameCategory
     * set requestBody.name = filepath.scenarios[<case scenarios>].examples[<case examples>].namePet
